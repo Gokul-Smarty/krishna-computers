@@ -13,18 +13,18 @@ const AdminDashboard = () => {
     const fetchData = async () => {
 
       const products = await axios.get(
-        "http://localhost:5000/api/products/count"
+        "http://krishna-computers.onrender.com/api/products/count"
       );
 
       const orders = await axios.get(
-        "http://localhost:5000/api/orders/count"
+        "http://krishna-computers.onrender.com/api/orders/count"
       );
 
       setTotalProducts(products.data.total);
       setTotalOrders(orders.data.total);
 
       const userRes = await axios.get(
-      "http://localhost:5000/api/orders/users-count"
+      "http://krishna-computers.onrender.com/api/orders/users-count"
     );
 
     setTotalUsers(userRes.data.total);

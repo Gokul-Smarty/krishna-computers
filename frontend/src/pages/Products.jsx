@@ -14,7 +14,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("http://krishna-computers.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data);
       })
@@ -53,7 +53,7 @@ const Products = () => {
               {/* Product Image */}
               <div className="relative">
                 <img
-                  src={`http://localhost:5000/uploads/${product.thumbnail}`}
+                  src={`http://krishna-computers.onrender.com/uploads/${product.thumbnail}`}
                   alt={product.name}
                   className="w-full h-36 object-cover"
                 />

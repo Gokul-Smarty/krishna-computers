@@ -11,7 +11,7 @@ const AdminOrders = () => {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/api/orders")
+      .get("http://krishna-computers.onrender.com/api/orders")
       .then((res) => setOrders(res.data));
 
   }, []);
@@ -19,7 +19,7 @@ const AdminOrders = () => {
  const confirmOrder = async (id) => {
 
   await axios.put(
-    `http://localhost:5000/api/orders/${id}/confirm`
+    `http://krishna-computers.onrender.com/api/orders/${id}/confirm`
   );
 
   setOrders((prev) =>
@@ -34,7 +34,7 @@ const AdminOrders = () => {
 const cancelOrder = async (id) => {
 
   await axios.put(
-    `http://localhost:5000/api/orders/${id}/cancel`
+    `http://krishna-computers.onrender.com/api/orders/${id}/cancel`
   );
 
   setOrders((prev) =>

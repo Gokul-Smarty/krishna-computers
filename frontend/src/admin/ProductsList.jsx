@@ -11,7 +11,7 @@ const ProductsList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("http://krishna-computers.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data);
       })
@@ -25,7 +25,7 @@ const ProductsList = () => {
 
   try {
 
-    await axios.delete(`http://localhost:5000/api/products/${id}`);
+    await axios.delete(`http://krishna-computers.onrender.com/api/products/${id}`);
 
     setProducts(products.filter((p) => p.id !== id));
 
@@ -52,7 +52,7 @@ const updateProduct = async () => {
     }
 
     await axios.put(
-      `http://localhost:5000/api/products/${editProduct.id}`,
+      `http://krishna-computers.onrender.com/api/products/${editProduct.id}`,
       formData
     );
 
@@ -186,7 +186,7 @@ return (
 
 <td className="p-2 md:p-4">
 <img
-src={`http://localhost:5000/uploads/${product.thumbnail}`}
+src={`http://krishna-computers.onrender.com/uploads/${product.thumbnail}`}
 className="w-12 h-12 md:w-16 md:h-16 object-cover rounded"
 />
 </td>

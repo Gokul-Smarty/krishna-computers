@@ -69,7 +69,7 @@ const Cart = () => {
           >
 
             <img
-              src={`http://localhost:5000/uploads/${item.thumbnail}`}
+              src={`http://krishna-computers.onrender.com/uploads/${item.thumbnail}`}
               className="w-full h-40 object-cover rounded"
             />
 

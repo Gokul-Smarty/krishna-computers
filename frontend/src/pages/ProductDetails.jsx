@@ -17,7 +17,7 @@ const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`http://krishna-computers.onrender.com/api/products/${id}`)
       .then((res) => {
         setProduct(res.data);
 
@@ -29,7 +29,7 @@ const [showForm, setShowForm] = useState(false);
       })
       .catch((err) => console.log(err));  
       axios
-.get(`http://localhost:5000/api/orders/status/${id}`)
+.get(`http://krishna-computers.onrender.com/api/orders/status/${id}`)
 .then((res) => {
   setOrderStatus(res.data);
 })
@@ -69,7 +69,7 @@ const [showForm, setShowForm] = useState(false);
         {/* Images Section */}
         <div>
           <img
-            src={`http://localhost:5000/uploads/${mainImage}`}
+            src={`http://krishna-computers.onrender.com/uploads/${mainImage}`}
             className="w-full h-96 object-cover rounded-lg shadow p-2"
           />
           {/* Thumbnail Images */}
@@ -80,7 +80,7 @@ const [showForm, setShowForm] = useState(false);
   <div className="flex gap-3 flex-wrap">
 
     <img
-      src={`http://localhost:5000/uploads/${product.thumbnail}`}
+      src={`http://krishna-computers.onrender.com/uploads/${product.thumbnail}`}
       onClick={() => setMainImage(product.thumbnail)}
       className="w-20 h-20 object-cover border rounded cursor-pointer 
 hover:scale-110 hover:shadow-lg transition duration-300"
@@ -89,7 +89,7 @@ hover:scale-110 hover:shadow-lg transition duration-300"
     {images.map((img, i) => (
       <img
         key={i}
-        src={`http://localhost:5000/uploads/${img}`}
+        src={`http://krishna-computers.onrender.com/uploads/${img}`}
         onClick={() => setMainImage(img)}
         className="w-20 h-20 object-cover border rounded cursor-pointer 
 hover:scale-110 hover:shadow-lg transition duration-300"

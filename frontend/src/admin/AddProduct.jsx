@@ -54,7 +54,7 @@ const addImageInput = () => {
         formData.append("images", images[i]);
       }
 
-      await axios.post("http://localhost:5000/api/products", formData);
+      await axios.post("http://krishna-computers.onrender.com/api/products", formData);
 
       alert("Product Added Successfully ✅");
 

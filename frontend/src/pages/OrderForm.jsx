@@ -20,7 +20,7 @@ const OrderForm = ({ product, onClose }) => {
 
   setLoading(true);
 
-  await axios.post("http://localhost:5000/api/orders", {
+  await axios.post("http://krishna-computers.onrender.com/api/orders", {
     product_id: product.id,
     product_name: product.name,
     price: product.price,

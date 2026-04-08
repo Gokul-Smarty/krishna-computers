@@ -11,7 +11,7 @@ const AdminUsers = () => {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/api/orders/users")
+      .get("http://krishna-computers.onrender.com/api/orders/users")
       .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
 
